@@ -291,7 +291,7 @@
 
   <div class="state-card" id="state-card">
     <div class="state-top">
-      <span class="state-name" id="state-name">Low engagement — resting</span>
+      <span class="state-name" id="state-name">Low engagement (resting)</span>
       <span class="state-badge" id="state-badge" style="background:#E1F5EE; color:#0F6E56;">resting</span>
     </div>
     <div class="track">
@@ -302,7 +302,7 @@
       <span>high engagement</span>
     </div>
     <div class="explain" id="explain">
-      Alpha is dominant. The visual cortex is idle — this is the eyes-closed resting state.
+      Alpha is dominant. This is the eyes-closed resting state, so the visual cortex is idle.
       Alpha surges over occipital regions when sensory input is absent, a well-documented
       idling rhythm of the cortex.
     </div>
@@ -316,7 +316,7 @@
     </div>
     <div class="legend-item" style="border-color:#5DCAA5;">
       <div class="legend-item-title">Alpha &nbsp;8–12 Hz</div>
-      <div class="legend-item-desc">Brain idle rhythm. Drops when attention engages — called Event-Related Desynchronization (ERD). Strongest at occipital channels.</div>
+      <div class="legend-item-desc">Brain idle rhythm. Drops when attention engages, a process called Event-Related Desynchronization (ERD). Strongest at occipital channels.</div>
     </div>
     <div class="legend-item" style="border-color:#7F77DD;">
       <div class="legend-item-title">Beta &nbsp;13–30 Hz</div>
@@ -325,7 +325,7 @@
   </div>
 
   <div class="footer">
-    EEG Attention Analysis &mdash; UC Berkeley &nbsp;|&nbsp;
+    EEG Attention Analysis: UC Berkeley &nbsp;|&nbsp;
     Based on Pope, Bogart &amp; Bartolome (1995) &nbsp;|&nbsp;
     Dataset: OpenNeuro ds004148
   </div>
@@ -335,18 +335,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
   const STATES = [
-    { max: 0.18, name: 'Low engagement — resting', badge: 'resting',
+    { max: 0.18, name: 'Low engagement (resting)', badge: 'resting',
       color: '#5DCAA5', badgeBg: '#E1F5EE', badgeColor: '#0F6E56',
-      explain: 'Alpha is dominant. The visual cortex is idle — this is the eyes-closed resting state. Alpha surges over occipital regions when sensory input is absent, a well-documented idling rhythm of the cortex.' },
-    { max: 0.40, name: 'Moderate engagement — alert', badge: 'alert',
+      explain: 'Alpha is dominant. This is the eyes-closed resting state, so the visual cortex is idle. Alpha surges over occipital regions when sensory input is absent, a well-documented idling rhythm of the cortex.' },
+    { max: 0.40, name: 'Moderate engagement (alert)', badge: 'alert',
       color: '#FAC775', badgeBg: '#FAEEDA', badgeColor: '#854F0B',
       explain: 'Alpha and beta are more balanced. The brain is awake and responsive but not under heavy cognitive load. Eyes-open rest or light passive attention typically produces this pattern.' },
-    { max: 0.75, name: 'High engagement — active thinking', badge: 'active',
+    { max: 0.75, name: 'High engagement (active thinking)', badge: 'active',
       color: '#7F77DD', badgeBg: '#EEEDFE', badgeColor: '#534AB7',
-      explain: 'Beta is rising as ERD suppresses alpha. The brain is allocating resources to cognitive processing — working memory, attention control, and problem-solving are all active.' },
-    { max: Infinity, name: 'Very high engagement — deep focus', badge: 'focused',
+      explain: 'Beta is rising as ERD suppresses alpha. The brain is allocating resources to cognitive processing: working memory, attention control, and problem-solving are all active.' },
+    { max: Infinity, name: 'Very high engagement (deep focus)', badge: 'focused',
       color: '#534AB7', badgeBg: '#CECBF6', badgeColor: '#26215C',
-      explain: 'Beta strongly dominates. Alpha is suppressed across frontal and parietal regions. This level corresponds to sustained, effortful cognitive work — mental arithmetic, complex reasoning, or intense concentration.' },
+      explain: 'Beta strongly dominates. Alpha is suppressed across frontal and parietal regions. This level corresponds to sustained, effortful cognitive work: mental arithmetic, complex reasoning, or intense concentration.' },
   ];
 
   const DOM_LABELS = { Theta: 'drowsy / wandering', Alpha: 'relaxed / idle', Beta: 'active / focused' };
